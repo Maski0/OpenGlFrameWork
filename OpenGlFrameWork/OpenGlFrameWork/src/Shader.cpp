@@ -6,9 +6,6 @@
 #include <sstream>
 
 
-
-
-
 Shader::Shader(const std::string& filepath)
 	:m_FilePath(filepath), m_RendererID(0)
 {
