@@ -16,6 +16,5 @@ namespace BFW
 
 	private:
 		float m_ClearColor[4];
-
 	};
 }

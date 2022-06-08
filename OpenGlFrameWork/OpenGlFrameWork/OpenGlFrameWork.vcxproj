@@ -146,6 +146,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Engine.cpp" />
+    <ClCompile Include="src\FrameWorks\Cube2D.cpp" />
     <ClCompile Include="src\FrameWorks\BaseFrameWork.cpp" />
     <ClCompile Include="src\FrameWorks\ClearColorFW.cpp" />
     <ClCompile Include="src\FrameWorks\Texture2D.cpp" />
@@ -164,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\Basic.shader" />
+    <None Include="res\shaders\Color.shader" />
     <None Include="src\OutSource\glm\detail\func_common.inl" />
     <None Include="src\OutSource\glm\detail\func_common_simd.inl" />
     <None Include="src\OutSource\glm\detail\func_exponential.inl" />
@@ -302,6 +304,7 @@
     <None Include="src\OutSource\glm\gtx\wrap.inl" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\FrameWorks\Cube2D.h" />
     <ClInclude Include="src\FrameWorks\BaseFrameWork.h" />
     <ClInclude Include="src\FrameWorks\ClearColorFW.h" />
     <ClInclude Include="src\FrameWorks\Texture2D.h" />

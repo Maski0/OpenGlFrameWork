@@ -22,7 +22,7 @@
 
 #include "FrameWorks/ClearColorFW.h"
 #include "FrameWorks/Texture2D.h"
-
+#include "FrameWorks/Cube2D.h"
 
 int main(void)
 {
@@ -61,7 +61,7 @@ int main(void)
 
     ImGui::CreateContext();
     ImGui_ImplGlfwGL3_Init(window, true);
-    ImGui::StyleColorsDark();
+    ImGui::StyleColorsLight();
 
     BFW::BaseFrameWork* currentFw = nullptr;
     BFW::BaseMenu* mainMenu = new BFW::BaseMenu(currentFw);
@@ -69,6 +69,7 @@ int main(void)
 
     mainMenu->RegisterFw<BFW::ClearColorFW>("Clear Color");
     mainMenu->RegisterFw<BFW::Texture2D>(" 2D Texture");
+    mainMenu->RegisterFw<BFW::Cube2D>("Cube 2D");
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
@@ -77,9 +78,13 @@ int main(void)
         /* Render here */
         renderer.Clear();
 
-        
-
         ImGui_ImplGlfwGL3_NewFrame();
+        glm::vec2 pos(11, 12);
+        //ImGui::SetNextWindowPos(pos);
+        ImGui::Begin("Stats:");
+        ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+        ImGui::End();
+
         if (currentFw)
         {
             currentFw->OnUpdate(0.0f);
