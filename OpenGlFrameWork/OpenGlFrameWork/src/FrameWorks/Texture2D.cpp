@@ -55,7 +55,7 @@ namespace BFW
 	}
 	void Texture2D::OnRender()
 	{
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        glClearColor(0.88725f, 0.887246f, 0.887255f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
         Renderer renderer;

@@ -51,7 +51,7 @@ namespace BFW
 
 	void Cube2D::OnRender()
 	{
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glClearColor(0.88725f, 0.887246f, 0.887255f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		Renderer renderer;
@@ -62,6 +62,7 @@ namespace BFW
 		m_Shader.SetUniform4f("u_Color", m_ClearColor[0], m_ClearColor[1], m_ClearColor[2], m_ClearColor[3]);
 		m_Shader.SetUniformMat4f("u_MVP", mvp);
 		renderer.Draw(m_VAO, *m_IB, m_Shader);
+		//std::cout << m_ClearColor[0] << " " << m_ClearColor[1] << " " << m_ClearColor[2] << std::endl;
 	}
 
 	void Cube2D::OnImGuiRender()

@@ -36,7 +36,7 @@ int main(void)
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 
-    /* Create a windowed mode window and its OpenGL context */
+    /* Createing a windowed mode window and its OpenGL context */
     window = glfwCreateWindow(960, 540, "App", NULL, NULL);
     if (!window)
     {
@@ -44,7 +44,7 @@ int main(void)
         return -1;
     }
 
-    /* Make the window's context current */
+    /* Makeing the window's context current */
     glfwMakeContextCurrent(window);
 
     
@@ -74,7 +74,7 @@ int main(void)
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
-        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        glClearColor(0.88725f, 0.887246f, 0.887255f, 1.0f);
         /* Render here */
         renderer.Clear();
 
